@@ -1,3 +1,4 @@
+import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
@@ -6,6 +7,7 @@ import vuetify from './plugins/vuetify';
 import {store} from './store'
 // import * as firebase from "firebase";
 import firebase from 'firebase';
+
 require('firebase/firestore');
 
 const configOptions = {
@@ -18,7 +20,7 @@ const configOptions = {
     appId: "1:472192303750:web:eddc4e7c5823d975434707"
 }; 
 firebase.initializeApp(configOptions);
-
+// import 'material-design-icons-iconfont/dist/material-design-icons.css';
 Vue.config.productionTip = false
 Vue.prototype.$firebase = firebase;
 

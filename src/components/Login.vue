@@ -5,8 +5,8 @@
   <v-row align="center" justify="center">-->
   <v-col cols="12" sm="8" md="4">
     <v-card class="elevation-12">
-      <v-toolbar color="primary" dark flat>
-        <v-toolbar-title>Login</v-toolbar-title>
+      <v-toolbar color="teal" dark flat>
+        <v-toolbar-title>Acceso Colaboradores</v-toolbar-title>
         <v-spacer />
       </v-toolbar>
       <v-form action="#" @submit.prevent="submit">
@@ -14,6 +14,7 @@
           <v-text-field
             :rules="emailRules"
             label="User"
+            color="teal"
             id="email"
             type="email"
             name="email"
@@ -29,6 +30,7 @@
           :rules="passwordRules"
             id="password"
             label="Password"
+            color="teal"
             name="password"
             class="form-control"
             prepend-icon="mdi-eye"
@@ -42,10 +44,8 @@
           </v-alert>
         </v-card-text>
 
-        <v-card-actions class="form-group">
-          <v-spacer />
-          <v-btn color="primary" type="submit">Login</v-btn>
-          <!-- <v-btn color="primary" type="submit" @click="$router.push('/home')">Login</v-btn> -->
+        <v-card-actions class="form-group justify-center py-4">
+          <v-btn color="teal" class="white--text subtitle-1" type="submit">Iniciar Sesión</v-btn>
         </v-card-actions>
       </v-form>
     </v-card>
