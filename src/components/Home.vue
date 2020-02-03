@@ -52,16 +52,18 @@
         <div v-if="testCollection.length > 0" class="pt-4">
           <!-- <h2>Datos del Colaborador</h2> -->
           <v-card outlined color="#4db6ac">
-            <v-card-title class="subheading font-weight-bold white--text">Datos del Colaborado</v-card-title>
+            <v-card-title
+              class="subheading font-weight-bold white--text text-center"
+            >Datos del colaborador</v-card-title>
 
             <v-divider></v-divider>
 
             <v-list>
               <div v-for="item in testCollection" :key="item.id">
-                <v-list-item>
+                <!-- <v-list-item>
                   <v-list-item-content>DNI/CE:</v-list-item-content>
                   <v-list-item-content class="align-end">{{ item.Documento }}</v-list-item-content>
-                </v-list-item>
+                </v-list-item>-->
 
                 <v-list-item>
                   <v-list-item-content>Nombre:</v-list-item-content>
@@ -78,17 +80,20 @@
                   <v-list-item-content class="align-end">{{ item.FechaNace }}</v-list-item-content>
                 </v-list-item>
                 <v-list-item>
+                  <v-list-item-content>Cuenta:</v-list-item-content>
+                  <v-list-item-content class="align-end">{{ item.Cuenta }}</v-list-item-content>
+                </v-list-item>
+                <v-list-item>
                   <v-list-item-content>Cargo:</v-list-item-content>
                   <v-list-item-content class="align-end">{{ item.Cargo }}</v-list-item-content>
                 </v-list-item>
                 <v-list-item>
-                  <v-list-item-content>Celular:</v-list-item-content>
-                  <v-list-item-content class="align-end">{{ item.Celular }}</v-list-item-content>
+                  <v-list-item-content>Superior:</v-list-item-content>
+                  <v-list-item-content class="align-end">{{ item.Superior }}</v-list-item-content>
                 </v-list-item>
-
                 <v-list-item>
-                  <v-list-item-content>Cuenta:</v-list-item-content>
-                  <v-list-item-content class="align-end">{{ item.Cuenta }}</v-list-item-content>
+                  <v-list-item-content>Site:</v-list-item-content>
+                  <v-list-item-content class="align-end">{{ item.Site }}</v-list-item-content>
                 </v-list-item>
               </div>
             </v-list>
@@ -140,10 +145,11 @@ export default {
                 Documento: doc.data().Documento,
                 Nombre: doc.data().Nombre,
                 Apellido: doc.data().Apellido,
-                Cargo: doc.data().Cargo,
                 FechaNace: doc.data().FechaNace,
-                Celular: doc.data().Celular,
-                Cuenta: doc.data().Cuenta
+                Cuenta: doc.data().Cuenta,
+                Cargo: doc.data().Cargo,
+                Superior: doc.data().Superior,
+                Site: doc.data().Site
               });
             });
             console.log(testCollection);
@@ -174,10 +180,11 @@ export default {
                 Documento: doc.data().Documento,
                 Nombre: doc.data().Nombre,
                 Apellido: doc.data().Apellido,
-                Cargo: doc.data().Cargo,
                 FechaNace: doc.data().FechaNace,
-                Celular: doc.data().Celular,
-                Cuenta: doc.data().Cuenta
+                Cuenta: doc.data().Cuenta,
+                Cargo: doc.data().Cargo,
+                Superior: doc.data().Superior,
+                Site: doc.data().Site
               });
             });
             this.testCollection = testCollection;
@@ -205,7 +212,7 @@ export default {
     clearData: function(evt) {
       evt = evt ? evt : window.event;
       this.testCollection = [];
-      this.errMessage= "";
+      this.errMessage = "";
     }
   }
 };
