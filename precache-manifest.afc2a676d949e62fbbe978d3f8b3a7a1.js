@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/css/chunk-19350dfb.c2c905a6.css"
   },
   {
-    "revision": "a8c8059a7b0297098d14",
+    "revision": "d4f7a0b98c272bec31dd",
     "url": "/Konecta-validate/css/chunk-a1769e84.184f6d76.css"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/fonts/MaterialIcons-Regular.da4ea5cd.ttf"
   },
   {
-    "revision": "b5bdabfbac02f3a26859d23931292a11",
+    "revision": "81c578fdd4e01c3d0ae9f2205c440fb9",
     "url": "/Konecta-validate/index.html"
   },
   {
@@ -44,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/js/about.bf910667.js"
   },
   {
-    "revision": "d95303b0ab962efee1ad",
-    "url": "/Konecta-validate/js/app.a6b50e20.js"
+    "revision": "6b0f6c2f552481056e0c",
+    "url": "/Konecta-validate/js/app.68622a4f.js"
   },
   {
     "revision": "8785bd2683f3a61482c2",
     "url": "/Konecta-validate/js/chunk-19350dfb.e02ccc7d.js"
   },
   {
-    "revision": "a8c8059a7b0297098d14",
-    "url": "/Konecta-validate/js/chunk-a1769e84.046a1134.js"
+    "revision": "d4f7a0b98c272bec31dd",
+    "url": "/Konecta-validate/js/chunk-a1769e84.6a997730.js"
   },
   {
     "revision": "6c5540dca327d7f1efe8",
