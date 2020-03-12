@@ -25,6 +25,31 @@ export default new Router({
       },
     },
     {
+      path: '/postulantes',
+      name: 'postulantes',
+      component: () => import('../components/postulantes.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!firebase.auth().currentUser) {
+          next('/')
+        } else {
+          next()
+        }
+      },
+    },
+    
+    {
+      path: '/registro',
+      name: 'registro',
+      component: () => import('../components/registroInvitados.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!firebase.auth().currentUser) {
+          next('/')
+        } else {
+          next()
+        }
+      },
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "about" */ '../components/HelloWorld.vue')

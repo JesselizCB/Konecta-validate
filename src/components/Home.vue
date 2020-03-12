@@ -31,7 +31,7 @@
               color="#4db6ac"
               label="Ingrese el número de CE"
               type="text"
-              maxlength="7"
+              maxlength="12"
               required
               v-model="dniText"
               @click="clearData($event)"
@@ -39,7 +39,7 @@
               v-on:keyup.enter="validateUser(dniText,radios)"
             ></v-text-field>
             <v-btn
-              color="#4db6ac"
+               color="#4db6ac"
               class="ma-2 white--text mt-2 form-control"
               type="submit"
               @click="validateUser(dniText,radios)"
@@ -171,12 +171,14 @@ export default {
       } else {
         db.collection("colaboradores")
           .where("Documento", "==", userDoc)
-          .where("TipoDocumento", "==", "CE")
+          .where("TipoDocumento", "==", "CE ")
           .get()
           .then(snap => {
             const testCollection = [];
             snap.forEach(doc => {
+              console.log(doc.id, " => ", doc.data());
               testCollection.push({
+                
                 Documento: doc.data().Documento,
                 Nombre: doc.data().Nombre,
                 Apellido: doc.data().Apellido,

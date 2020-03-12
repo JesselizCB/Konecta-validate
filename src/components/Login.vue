@@ -6,14 +6,14 @@
   <v-col cols="12" sm="8" md="4">
     <v-card class="elevation-12">
       <v-toolbar color="teal" dark flat>
-        <v-toolbar-title>Acceso Colaboradores</v-toolbar-title>
+        <v-toolbar-title>Acceso de Colaboradores</v-toolbar-title>
         <v-spacer />
       </v-toolbar>
       <v-form action="#" @submit.prevent="submit">
         <v-card-text class="form-group">
           <v-text-field
             :rules="emailRules"
-            label="User"
+            label="Usuario"
             color="teal"
             id="email"
             type="email"
@@ -29,7 +29,7 @@
           <v-text-field
           :rules="passwordRules"
             id="password"
-            label="Password"
+            label="Contraseña"
             color="teal"
             name="password"
             class="form-control"
@@ -71,11 +71,11 @@ export default {
         password: ""
       },
       emailRules: [
-        v => !!v || "E-mail es requerido",
+        v => !!v || "El usuario es requerido",
         v => /.+@.+\..+/.test(v) || "El email no es válido"
       ],
       passwordRules:[
-        v => !!v || "Password es requirido",
+        v => !!v || "La contraseña es requirida",
       ],
       error: null
     };

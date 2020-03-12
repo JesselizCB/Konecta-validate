@@ -4,15 +4,31 @@
       <v-list dense>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>pageview</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Inicio</v-list-item-title>
+            <v-list-item-title @click="$router.replace('/home')">Consulta Colaboradores</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon>mdi-contact-mail</v-icon>
+            <v-icon>person</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title @click.prevent="consultaPostulante">Consulta Postulantes</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+         <v-list-item link>
+          <v-list-item-action>
+            <v-icon>perm_contact_calendar</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title @click.prevent="$router.replace('/registro')">Registro de invitados</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>exit_to_app</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title @click.prevent="signOut">Cerrar Sesión</v-list-item-title>
@@ -23,7 +39,9 @@
 
     <v-app-bar app color="teal" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Consulta colaborador</v-toolbar-title>
+      <v-toolbar-title v-if="$route.name === 'home'">Consulta de colaboradores</v-toolbar-title>
+      <v-toolbar-title v-if="$route.name === 'postulantes'">Consulta de postulantes</v-toolbar-title>
+      <v-toolbar-title v-if="$route.name === 'registro'">Registro de invitados</v-toolbar-title>
       <!-- <div class="card-body">
         <div v-if="user" class="alert alert-success" role="alert">You are logged in!</div>
       </div> -->
@@ -69,6 +87,11 @@ export default {
             name: "login"
           });
         });
+    },
+    consultaPostulante(){
+     this.$router.replace({
+            name: "postulantes"
+          });
     }
   }
 };
