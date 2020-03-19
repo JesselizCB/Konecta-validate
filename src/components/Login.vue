@@ -1,8 +1,4 @@
 <template>
-  <!-- <v-app id="inspire"> -->
-  <!-- <v-content> -->
-  <!-- <v-container class="fill-height d-flex justify-center" fluid>
-  <v-row align="center" justify="center">-->
   <v-col cols="12" sm="8" md="4">
     <v-card class="elevation-12">
       <v-toolbar color="teal" dark flat>
@@ -11,12 +7,12 @@
       </v-toolbar>
       <v-form action="#" @submit.prevent="submit">
         <v-card-text class="form-group">
+          <!-- type="email" -->
           <v-text-field
             :rules="emailRules"
             label="Usuario"
             color="teal"
             id="email"
-            type="email"
             name="email"
             prepend-icon="mdi-account-circle"
             class="form-control pb-2"
@@ -72,7 +68,7 @@ export default {
       },
       emailRules: [
         v => !!v || "El usuario es requerido",
-        v => /.+@.+\..+/.test(v) || "El email no es válido"
+        // v => /.+@.+\..+/.test(v) || "El email no es válido"
       ],
       passwordRules:[
         v => !!v || "La contraseña es requirida",
@@ -83,11 +79,12 @@ export default {
   
   methods: {
     submit() {
+      const email= this.form.email + '@konecta.com';
       firebase
         .auth()
-        .signInWithEmailAndPassword(this.form.email, this.form.password)
+        .signInWithEmailAndPassword(email, this.form.password)
         .then(data => {
-          this.$router.replace({ name: "home" });
+          this.$router.replace({ path: "/home" });
         })
         .catch(err => {
           //  this.error = err.message;
@@ -105,6 +102,7 @@ export default {
               this.error = "Se ha producido un error";
           }
         });
+        
     }
   }
 };

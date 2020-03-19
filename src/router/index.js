@@ -13,9 +13,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "home" */ '../components/Login.vue')
     },
     {
+      
       path: '/home',
-      name: 'home',
+      name: 'Consulta de colaboradores',
       component: () => import('../components/Home.vue'),
+      meta: { reqAuth: true },
       beforeEnter: (to, from, next) => {
         if (!firebase.auth().currentUser) {
           next('/')
@@ -26,7 +28,7 @@ export default new Router({
     },
     {
       path: '/postulantes',
-      name: 'postulantes',
+      name: 'Consulta de postulantes',
       component: () => import('../components/postulantes.vue'),
       beforeEnter: (to, from, next) => {
         if (!firebase.auth().currentUser) {
@@ -39,7 +41,7 @@ export default new Router({
     
     {
       path: '/registro',
-      name: 'registro',
+      name: 'Registro de invitados',
       component: () => import('../components/registroInvitados.vue'),
       beforeEnter: (to, from, next) => {
         if (!firebase.auth().currentUser) {

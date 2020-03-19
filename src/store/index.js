@@ -47,6 +47,7 @@ export const store = new Vuex.Store({
         commit("SET_USER", {
           displayName: user.displayName,
           email: user.email
+          
         });
       } else {
         commit("SET_USER", null);

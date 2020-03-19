@@ -38,6 +38,7 @@
               <v-text-field
                 v-if="selectDocumentType ==='Pasaporte'"
                 v-model="numDoc"
+                :clearable="clearable"
                 label="Ingrese el número de Pasaporte"
                 maxlength="11"
                 color="#4db6ac"
@@ -55,6 +56,7 @@
               <v-text-field
                 v-if="selectDocumentType ==='Permiso Temporal de Permanencia' || selectDocumentType ==='Carnet de Extranjeria'"
                 v-model="numDoc"
+                :clearable="clearable"
                 maxlength="9"
                 color="#4db6ac"
                 label="Ingrese el número de Documento"
