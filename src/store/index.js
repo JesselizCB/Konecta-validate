@@ -12,18 +12,12 @@ export const store = new Vuex.Store({
       loggedIn: false,
       data: null
     },
-    // colaborador: {
-    //   data: null
-    // }
 
   },
   getters: {
     user(state){
       return state.user
     },
-    // colaborador(state){
-    //   return state.colaborador
-    // }
   },
   mutations: {
     SET_LAYOUT (state, newLayout) {
@@ -35,10 +29,6 @@ export const store = new Vuex.Store({
     SET_USER(state, data) {
       state.user.data = data;
     },
-    // SET_COLABORADOR(state, data) {
-    //   state.colaborador.data = data;
-    // }
-
   },
   actions: {
     fetchUser({ commit }, user) {
@@ -53,16 +43,5 @@ export const store = new Vuex.Store({
         commit("SET_USER", null);
       }
     }
-    // fetchColaborador({ commit }, colaborador) {
-    //   commit("SET_LOGGED_IN", user !== null);
-    //   if (user) {
-    //     commit("SET_COLABORADOR", {
-    //       nombre: colaborador.nombre,
-    //       apellidos: colaborador.apellios
-    //     });
-    //   } else {
-    //     commit("SET_COLABORADOR", null);
-    //   }
-    // }
   }
 })

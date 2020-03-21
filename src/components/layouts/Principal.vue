@@ -33,7 +33,7 @@
               <v-list-item-title @click.prevent="$router.replace('/postulantes')">Consulta Postulantes</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item v-if="$firebase.auth().currentUser.email === 'admin@konecta.com'" link to="/registro">
+          <v-list-item v-if="showPerfiles()" link to="/registro">
             <v-list-item-action>
               <v-icon >perm_contact_calendar</v-icon>
             </v-list-item-action>
@@ -106,6 +106,18 @@ export default {
           });
         });
     },
+
+    showPerfiles(){
+      const currentUser = this.$firebase.auth().currentUser;
+      if(currentUser !== null){
+        if(currentUser.email === 'admin@konecta.com'){
+        return true;
+      }
+      else{
+        return false;
+      }
+      }
+    }
   }
 };
 </script>
