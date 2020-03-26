@@ -13,7 +13,6 @@ export default new Router({
       component: () => import(/* webpackChunkName: "home" */ '../components/Login.vue')
     },
     {
-      
       path: '/home',
       name: 'Consulta de colaboradores',
       component: () => import('../components/Home.vue'),
@@ -38,7 +37,19 @@ export default new Router({
         }
       },
     },
-    
+    {
+      path: '/listaInvitados',
+      name: 'Lista de invitados',
+      component: () => import('../components/listaInvitados.vue'),
+      beforeEnter: (to, from, next) => {
+        if (!firebase.auth().currentUser) {
+          next('/')
+        } else {
+          next()
+        }
+      },
+    },
+
     {
       path: '/registro',
       name: 'Registro de invitados',
@@ -51,42 +62,5 @@ export default new Router({
         }
       },
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ '../components/HelloWorld.vue')
-    }
-    
   ]
 })
-
-// const routes = [
-//   {
-//     path: '/',
-//     name: 'login',
-//     component: () => import(/* webpackChunkName: "home" */ '../components/Login.vue')
-//   },
-//   {
-//     path: '/home',
-//     name: 'home',
-//     component: () => import('../components/Home.vue'),
-//     beforeEnter: (to, from, next) => {
-//       if (!firebase.auth().currentUser) {
-//         next('/')
-//       } else {
-//         next()
-//       }
-//     },
-//   },
-//   {
-//     path: '/about',
-//     name: 'about',
-//     component: () => import(/* webpackChunkName: "about" */ '../components/HelloWorld.vue')
-//   }
-// ]
-
-// const router = new VueRouter({
-//   routes
-// })
-
-// export default router

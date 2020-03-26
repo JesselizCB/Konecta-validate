@@ -49,7 +49,6 @@
                 @keypress="isNumber($event)"
                 v-on:keyup.enter="validatePostulante(numDoc)"
                 :rules="pasaporteRules"
-                placeholder="Ingrese el número de pasaporte"
                 required
               ></v-text-field>
 
@@ -67,7 +66,6 @@
                 @keypress="isNumber($event)"
                 v-on:keyup.enter="validatePostulante(numDoc)"
                 :rules="ptpteRules"
-                placeholder="Ingrese el número de documento"
                 required
               ></v-text-field>
             </v-col>

@@ -314,6 +314,7 @@ export default {
           fecha: this.editedVisit.fecha,
           hora: this.editedVisit.hora,
           ubicacion: this.editedVisit.ubicacion,
+          estado: 'pendiente',
           createdAt: new Date()
         });
         this.clearForm();
@@ -327,6 +328,7 @@ export default {
             fecha: this.editedVisit.fecha,
             hora: this.editedVisit.hora,
             ubicacion: this.editedVisit.ubicacion,
+            estado: 'pendiente',
             createdAt: new Date()
           })
           .then(function(docRef) {

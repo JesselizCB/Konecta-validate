@@ -21,7 +21,7 @@
               <v-icon>pageview</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title @click="$router.replace('/home')">Consulta Colaboradores</v-list-item-title>
+              <v-list-item-title @click="$router.replace('/home')">Consulta de colaboradores</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
@@ -30,9 +30,10 @@
               <v-icon>person</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title @click.prevent="$router.replace('/postulantes')">Consulta Postulantes</v-list-item-title>
+              <v-list-item-title @click.prevent="$router.replace('/postulantes')">Consulta de postulantes</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+
           <v-list-item v-if="showPerfiles()" link to="/registro">
             <v-list-item-action>
               <v-icon >perm_contact_calendar</v-icon>
@@ -41,6 +42,16 @@
               <v-list-item-title  @click.prevent="$router.replace('/registro')">Registro de invitados</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+
+          <v-list-item link to="/listaInvitados" class="mt-2">
+            <v-list-item-action>
+              <v-icon>list_alt</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title @click="$router.replace('/listaInvitados')">Lista de invitados</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
         </v-list-item-group>
       </v-list>
 
