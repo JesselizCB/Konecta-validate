@@ -5,7 +5,7 @@
         <v-card class="mx-auto py-4 px-4" outlined>
           <!-- <p class="subheading text-center font-weight-bold">Tipo de documento del postulante</p> -->
           <v-row justify="center" class="">
-            <v-col class="d-flex " cols="12" sm="12">
+            <v-col class="d-flex " cols="12" sm="9">
               <v-select
                 v-model="selectDocumentType"
                 :items="DocumentType"
@@ -18,7 +18,7 @@
             </v-col>
           </v-row>
           <v-row justify="center" class="">
-            <v-col class="d-flex" cols="12" sm="12">
+            <v-col class="d-flex" cols="12" sm="9">
               <v-text-field
                 v-if="selectDocumentType !=='Pasaporte' && selectDocumentType!=='Permiso Temporal de Permanencia' && selectDocumentType!=='Carnet de Extranjeria'"
                 :rules="dniRules"

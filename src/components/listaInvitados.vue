@@ -110,10 +110,10 @@ export default {
         { text: "Nombre", value: "nombres" },
         { text: "Apellidos", value: "apellidos" },
         { text: "Fecha", value: "fecha" },
-        { text: "Hora ", value: "hora" },
+        { text: "Hora programada", value: "hora" },
         { text: "Ubicación", value: "ubicacion"},
-        { text: "Hora ingreso", value: "horaIngreso"},
-        { text: "Hola salida", value: "horaSalida"}
+        { text: "Hora de ingreso", value: "horaIngreso"},
+        { text: "Hora de salida", value: "horaSalida"}
       ],
       ref: this.$firebase.firestore().collection("visitantes"),
       idReg: "",

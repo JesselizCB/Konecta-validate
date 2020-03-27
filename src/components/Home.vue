@@ -8,8 +8,7 @@
             <v-radio color="teal" label="DNI" value="rdbDNI"></v-radio>
             <v-radio color="teal" label="CE" value="rdbCE"></v-radio>
           </v-radio-group>
-          <!-- <p>{{ radios || 'null' }}</p> -->
-          <div class="px-6 text-center">
+          <div class="px-12 text-center">
             <v-text-field
               v-if="radios === 'rdbDNI'"
               :rules="dniRules"
@@ -80,7 +79,16 @@
                           >{{ item.TipoDocumento }} - {{ item.Documento }}</p>
                         </div>
                         <div class="flex-column pt-0">
-                          <v-btn color="#00c9b7" @click="dialog = false" fab top dark small absolute right>
+                          <v-btn
+                            color="#00c9b7"
+                            @click="dialog = false"
+                            fab
+                            top
+                            dark
+                            small
+                            absolute
+                            right
+                          >
                             <v-icon dark medium>close</v-icon>
                           </v-btn>
                         </div>
@@ -118,7 +126,6 @@
                           <v-btn
                             color="#00c9b7"
                             :disabled="!valid"
-                            
                             class="mr-4 white--text"
                             @click="
                               addObsFotocheck(),
@@ -224,7 +231,7 @@
 </template>
 
 <script>
-import moment from 'moment'
+import moment from "moment";
 export default {
   created() {
     this.$store.commit("SET_LAYOUT", "principal-layout");
@@ -248,7 +255,7 @@ export default {
       testCollection: [],
       ref: this.$firebase.firestore().collection("obs-fotocheck"),
       errMessage: "",
-      items: ["Perdida", "Robo", "Tramite", "Olvido","Otros"],
+      items: ["Perdida", "Robo", "Tramite", "Olvido", "Otros"],
       dniRules: [
         v => !!v || "Ingrese un DNI o CE"
         //  v => /.+@.+\..+/.test(v) || "El email no es válido"
@@ -382,9 +389,11 @@ export default {
         .then(snap => {
           const observacionCollection = [];
           snap.forEach(doc => {
-          // console.log(doc.id, " => ", doc.data());
+            // console.log(doc.id, " => ", doc.data());
             observacionCollection.push({
-              createdAt: moment.unix(doc.data().createdAt.seconds).format('MM/DD/YYYY, h:mm a'),
+              createdAt: moment
+                .unix(doc.data().createdAt.seconds)
+                .format("MM/DD/YYYY, h:mm a"),
               motivo: doc.data().motivo,
               observacion: doc.data().observacion
             });
