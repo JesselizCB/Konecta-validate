@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d55d2aed9d68593759d",
+    "revision": "fc24e45121d15fd3afa2",
     "url": "/Konecta-validate/css/chunk-10eedb04.827f3e10.css"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/css/chunk-2e75e136.7b2048a5.css"
   },
   {
-    "revision": "dfd3e9d9f194ed8309c2",
+    "revision": "79d299a8de28f4063a5c",
     "url": "/Konecta-validate/css/chunk-309e64cd.1573f008.css"
   },
   {
@@ -56,16 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/img/logo_konecta-2.6cff3bda.png"
   },
   {
-    "revision": "2773b376d8e62d21c08f7422c92efcfc",
+    "revision": "09b511861a872abd521946e42fbbf3e3",
     "url": "/Konecta-validate/index.html"
   },
   {
-    "revision": "732b2c6726f8f7fe0386",
-    "url": "/Konecta-validate/js/app.ba1183cf.js"
+    "revision": "1da1f60990fba90c7dcd",
+    "url": "/Konecta-validate/js/app.78443200.js"
   },
   {
-    "revision": "8d55d2aed9d68593759d",
-    "url": "/Konecta-validate/js/chunk-10eedb04.457296b4.js"
+    "revision": "fc24e45121d15fd3afa2",
+    "url": "/Konecta-validate/js/chunk-10eedb04.147d036f.js"
   },
   {
     "revision": "be86951b7269ee19a79a",
@@ -76,16 +76,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Konecta-validate/js/chunk-2b1239ec.9872c18e.js"
   },
   {
-    "revision": "17d8a2fd45e2454b023d",
-    "url": "/Konecta-validate/js/chunk-2d20f5a2.4fa5c9e3.js"
+    "revision": "73b0b00aa463d3faf4d4",
+    "url": "/Konecta-validate/js/chunk-2d20f5a2.c0fb9738.js"
   },
   {
     "revision": "d15108604c0e6c31f518",
     "url": "/Konecta-validate/js/chunk-2e75e136.600eef96.js"
   },
   {
-    "revision": "dfd3e9d9f194ed8309c2",
-    "url": "/Konecta-validate/js/chunk-309e64cd.3b52f193.js"
+    "revision": "79d299a8de28f4063a5c",
+    "url": "/Konecta-validate/js/chunk-309e64cd.38f2bc2e.js"
   },
   {
     "revision": "461a299c638eeecb23a6",
