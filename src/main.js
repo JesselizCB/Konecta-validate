@@ -13,13 +13,13 @@ require('firebase/firestore');
 
 
 const configOptions = {
-  apiKey: "AIzaSyCWG4l-2HUHomwOMs0ofdquhxoY7r0mpgA",
-    authDomain: "validate-k.firebaseapp.com",
-    databaseURL: "https://validate-k.firebaseio.com",
-    projectId: "validate-k",
-    storageBucket: "validate-k.appspot.com",
-    messagingSenderId: "472192303750",
-    appId: "1:472192303750:web:eddc4e7c5823d975434707"
+  apiKey: "AIzaSyDbi63UYLh3CqeA6ZV5Ogd9FPZPPt7PvnM",
+  authDomain: "konecta-accesos.firebaseapp.com",
+  databaseURL: "https://konecta-accesos.firebaseio.com",
+  projectId: "konecta-accesos",
+  storageBucket: "konecta-accesos.appspot.com",
+  messagingSenderId: "903312260124",
+  appId: "1:903312260124:web:9a34970961425927c8f3d9"
 }; 
 var secondaryAppConfig = {
   apiKey: "AIzaSyB1PtbrxIC7pfT5Vy1R3MPAEyOCjuQa6B8",

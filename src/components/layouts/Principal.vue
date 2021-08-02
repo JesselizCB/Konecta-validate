@@ -81,8 +81,8 @@
         </v-row>
       </v-container>
     </v-content>
-    <v-footer color="teal" app>
-      <span class="white--text">&copy; 2020</span>
+    <v-footer color="teal" app class="justify-center">
+      <span class="white--text">&copy; Konecta - 2020</span>
     </v-footer>
   </v-app>
 </template>

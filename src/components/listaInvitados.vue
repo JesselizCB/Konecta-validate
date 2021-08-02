@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-lg>
     <v-layout justify-center>
-      <v-flex xs12 md12 xl3 pa-2>
+      <v-flex pa-2>
         <div class="pt-4">
           <v-card>
             <v-card-title>
@@ -31,7 +31,7 @@
                   depressed
                   small
                   class="text-capitalize white--text"
-                  @click="editVisita(item), dialog = true"
+                  @click="editVisita(item), dialogIngreso = true"
                 >Ingreso</v-btn>
               </template>
               <template class="justify-center" v-slot:item.horaSalida="{ item }">
@@ -46,17 +46,17 @@
                 >Salida</v-btn>
               </template>
             </v-data-table>
-            <v-dialog persistent v-model="dialog" max-width="290">
+            <v-dialog persistent v-model="dialogIngreso" max-width="290">
               <v-card>
                 <v-card-title class="headline">Registro del invitado</v-card-title>
                 <v-card-text>Se registro satisfactoriamente el ingreso del invitado</v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="green darken-1" text @click="dialog = false">Cancelar</v-btn>
+                  <v-btn color="green darken-1" text @click="dialogIngreso = false">Cancelar</v-btn>
                   <v-btn
                     color="green darken-1"
                     text
-                    @click="updateHoraIngresoVisita(), dialog = false"
+                    @click="updateHoraIngresoVisita(), dialogIngreso = false"
                   >Aceptar</v-btn>
                 </v-card-actions>
               </v-card>
@@ -98,7 +98,7 @@ export default {
       clearable: true,
       errMessage: "",
       dialog: false,
-      hidden: false,
+      dialogIngreso: false,
       visitantesCollection: [],
       search: "",
       headers: [
@@ -148,7 +148,6 @@ export default {
                 ubicacion: doc.data().ubicacion,
                 horaIngreso: moment.unix(doc.data().horaIngreso.seconds).format('DD/MM/YYYY, h:mm a'),
                 horaSalida: moment.unix(doc.data().horaSalida.seconds).format('DD/MM/YYYY, h:mm a')
-
               });
               } else{
               visitantesCollection.push({
@@ -188,11 +187,12 @@ export default {
       this.idReg = item.id;
     },
     updateHoraIngresoVisita() {
-      console.log(this.idReg);
+      console.log('en update hora ingreso')
+     console.log(this.idReg);
       this.ref.doc(this.idReg).update({
+        // estado: "finalizado",
         horaIngreso: new Date()
       });
-      this.hidden = true;
       this.getVisitas();
     },
     updateHoraSalidaVisita() {

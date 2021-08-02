@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Konecta-validate/precache-manifest.c07e18d225c9cf57d26af82d7dfaf236.js"
+  "/Konecta-validate/precache-manifest.e84abc0e80c287f0bbeaeedc2255de84.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "konecta-validate"});
