@@ -16,17 +16,6 @@
           </v-list-item>
           <v-divider></v-divider>
 
-          <!-- <v-list-item link to="/home" class="mt-2">
-            <v-list-item-action>
-              <v-icon>pageview</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title @click="$router.replace('/home')"
-                >Consulta de colaboradores</v-list-item-title
-              >
-            </v-list-item-content>
-          </v-list-item> -->
-
           <v-list-item link to="/colaborador" class="mt-2">
             <v-list-item-action>
               <v-icon>pageview</v-icon>
