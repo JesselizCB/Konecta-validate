@@ -12,10 +12,23 @@ export default new Router({
       name: 'login',
       component: () => import(/* webpackChunkName: "home" */ '../components/Login.vue')
     },
+    // {
+    //   path: '/home',
+    //   name: 'Consulta de colaboradores',
+    //   component: () => import('../components/Home.vue'),
+    //   meta: { reqAuth: true },
+    //   beforeEnter: (to, from, next) => {
+    //     if (!firebase.auth().currentUser) {
+    //       next('/')
+    //     } else {
+    //       next()
+    //     }
+    //   },
+    // },
     {
-      path: '/home',
-      name: 'Consulta de colaboradores',
-      component: () => import('../components/Home.vue'),
+      path: '/colaborador',
+      name: 'Consulta de colaborador 2.0',
+      component: () => import('../views/consultaColaborador.vue'),
       meta: { reqAuth: true },
       beforeEnter: (to, from, next) => {
         if (!firebase.auth().currentUser) {

@@ -12,12 +12,15 @@ export const store = new Vuex.Store({
       loggedIn: false,
       data: null
     },
-
+    protocol: 'https://',
+    host: 'api.grupokonecta.pe/clubkonecta_prod', 
+    resource: 'v2',
   },
   getters: {
     user(state){
       return state.user
     },
+    api: (state) => `${state.protocol}${state.host}/${state.resource}`
   },
   mutations: {
     SET_LAYOUT (state, newLayout) {

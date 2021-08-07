@@ -84,7 +84,7 @@ export default {
         .auth()
         .signInWithEmailAndPassword(email, this.form.password)
         .then(data => {
-          this.$router.replace({ path: "/home" });
+          this.$router.replace({ path: "/colaborador" });
         })
         .catch(err => {
           //  this.error = err.message;
