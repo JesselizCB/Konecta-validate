@@ -13,13 +13,12 @@ require('firebase/firestore');
 
 
 const configOptions = {
-  apiKey: "AIzaSyDbi63UYLh3CqeA6ZV5Ogd9FPZPPt7PvnM",
-  authDomain: "konecta-accesos.firebaseapp.com",
-  databaseURL: "https://konecta-accesos.firebaseio.com",
-  projectId: "konecta-accesos",
-  storageBucket: "konecta-accesos.appspot.com",
-  messagingSenderId: "903312260124",
-  appId: "1:903312260124:web:9a34970961425927c8f3d9"
+  apiKey: "AIzaSyAULvQ2WBbDJyjiIWACQLwN_Tjg8d4uWeg",
+  authDomain: "k-accesos.firebaseapp.com",
+  projectId: "k-accesos",
+  storageBucket: "k-accesos.appspot.com",
+  messagingSenderId: "191820207084",
+  appId: "1:191820207084:web:db468c10593647ac9466c9"
 }; 
 var secondaryAppConfig = {
   apiKey: "AIzaSyB1PtbrxIC7pfT5Vy1R3MPAEyOCjuQa6B8",

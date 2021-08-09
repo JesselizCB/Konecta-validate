@@ -180,7 +180,7 @@
               locale="es"
               class="elevation-1"
             >
-              <template class="justify-center" v-slot:item.action="{ item }">
+              <template class="justify-center"  v-slot:[`item.action`]="{ item }">
                 <v-icon class="mr-2" @click="editVisita(item)">mdi-pencil</v-icon>
                 <!-- <v-icon @click="deleteVisita(item)">mdi-delete</v-icon> -->
               </template>

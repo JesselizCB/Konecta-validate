@@ -23,7 +23,7 @@
               locale="es-ES"
               class="elevation-1"
             >
-              <template class="justify-center" v-slot:item.horaIngreso="{ item }">
+              <template class="justify-center" v-slot:[`item.horaIngreso`]="{ item }">
                 <p v-if="item.horaIngreso">{{item.horaIngreso}}</p>
                 <v-btn
                   v-if="!item.horaIngreso"
@@ -34,7 +34,7 @@
                   @click="editVisita(item), dialogIngreso = true"
                 >Ingreso</v-btn>
               </template>
-              <template class="justify-center" v-slot:item.horaSalida="{ item }">
+              <template class="justify-center" v-slot:[`item.horaSalida`]="{ item }">
                 <p v-if="item.horaSalida">{{item.horaSalida}}</p>
                 <v-btn
                   v-if="!item.horaSalida"
