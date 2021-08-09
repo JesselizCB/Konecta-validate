@@ -11,6 +11,11 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [{
+      "source": "/service-worker.js",
+      "header": [{ "key": "Cache-Control", "value": "co-cache" }]
+    }]
   }
 }
+
