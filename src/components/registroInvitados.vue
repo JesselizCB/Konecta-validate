@@ -182,7 +182,6 @@
             >
               <template class="justify-center"  v-slot:[`item.action`]="{ item }">
                 <v-icon class="mr-2" @click="editVisita(item)">mdi-pencil</v-icon>
-                <!-- <v-icon @click="deleteVisita(item)">mdi-delete</v-icon> -->
               </template>
             </v-data-table>
           </v-card>
@@ -196,7 +195,6 @@
 export default {
   created() {
     this.$store.commit("SET_LAYOUT", "principal-layout");
-    // this.visitantesCollection;
     this.getVisitas();
   },
   data(vm) {
@@ -298,7 +296,6 @@ export default {
   },
 
   mounted() {
-    // this.datosPersonalesPost.arrEjm = this.rrselect;
     this.getVisitas();
   },
 
@@ -355,7 +352,6 @@ export default {
         .then(snap => {
           const visitantesCollection = [];
           snap.forEach(doc => {
-            // console.log(doc.id, " => ", doc.data());
             visitantesCollection.push({
               id: doc.id,
               tipoDocumento: doc.data().tipoDocumento,
@@ -375,7 +371,6 @@ export default {
         });
     },
     isNumber: function(evt) {
-      // this.testCollection = [];
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
       if (
@@ -392,7 +387,6 @@ export default {
     editVisita(item) {
       console.log(this.visitantesCollection.indexOf(item));
       this.editedIndex = this.visitantesCollection.indexOf(item);
-      // console.log(item);
       this.editedVisit = Object.assign({}, item);
       this.dialog = true;
     },

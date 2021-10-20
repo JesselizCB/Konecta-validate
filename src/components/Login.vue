@@ -7,7 +7,6 @@
       </v-toolbar>
       <v-form action="#" @submit.prevent="submit">
         <v-card-text class="form-group">
-          <!-- type="email" -->
           <v-text-field
             :rules="emailRules"
             label="Usuario"
@@ -46,10 +45,7 @@
       </v-form>
     </v-card>
   </v-col>
-  <!-- </v-row>
-  </v-container>-->
-  <!-- </v-content> -->
-  <!-- </v-app> -->
+
 </template>
 
 <script>
@@ -68,7 +64,6 @@ export default {
       },
       emailRules: [
         v => !!v || "El usuario es requerido",
-        // v => /.+@.+\..+/.test(v) || "El email no es válido"
       ],
       passwordRules:[
         v => !!v || "La contraseña es requirida",
@@ -87,7 +82,6 @@ export default {
           this.$router.replace({ path: "/colaborador" });
         })
         .catch(err => {
-          //  this.error = err.message;
           switch (err.code) {
             case "auth/user-not-found":
               this.error = "El usuario no se encuentra registrado";

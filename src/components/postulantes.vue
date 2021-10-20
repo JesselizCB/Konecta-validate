@@ -3,7 +3,6 @@
     <v-layout justify-center>
       <v-flex xs12 md6 xl3 pa-2>
         <v-card class="mx-auto py-4 px-4" outlined>
-          <!-- <p class="subheading text-center font-weight-bold">Tipo de documento del postulante</p> -->
           <v-row justify="center" class="">
             <v-col class="d-flex " cols="12" sm="9">
               <v-select
@@ -83,10 +82,8 @@
               </v-btn>
             </v-col>
           </v-row>
-          <!-- </div> -->
         </v-card>
         <div v-if="postulantes.length > 0" class="pt-4">
-          <!-- <h2>Datos del Colaborador</h2> -->
           <v-card outlined color="#4db6ac">
             <v-card-title
               class="subheading font-weight-bold white--text text-center"
@@ -186,25 +183,20 @@ export default {
               NombreSocial: datoSnapshot.val().nombre_social,
               FechaNac: datoSnapshot.val().fecha_nac
             });
-            //  this.postulantes = postulantesCollection;
             return true;
           });
         });
       });
       if (postulantesCollection.length === 0) {
-              // this.testCollection.push({ message: "El colaborador no se encuentra registrado o no esta áctivo" });
               this.errMessage =
                 "El postulante no se encuentra registrado";
               this.postulantes = [];
             } else {
-              // this.testCollection.push({ message: "El colaborador no se encuentra registrado o no esta áctivo" });
               this.postulantes = postulantesCollection;
               this.errMessage = "";
             }
-      // this.postulantes = postulantesCollection;
     },
     isNumber: function(evt) {
-      // this.testCollection = [];
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
       if (

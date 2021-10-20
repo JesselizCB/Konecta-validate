@@ -89,7 +89,6 @@ import moment from "moment";
 export default {
   created() {
     this.$store.commit("SET_LAYOUT", "principal-layout");
-    // this.visitantesCollection;
     this.getVisitas();
   },
   data() {
@@ -128,13 +127,11 @@ export default {
   methods: {
     getVisitas() {
       this.ref
-        // .orderBy("createdAt", "desc")
         .where("estado", "==", "pendiente")
         .get()
         .then(snap => {
           const visitantesCollection = [];
           snap.forEach(doc => {
-            //  console.log(doc.id, " => ", doc.data());
             if (doc.data().horaIngreso) {
               if (doc.data().horaSalida) {
                 visitantesCollection.push({
@@ -190,7 +187,6 @@ export default {
       console.log('en update hora ingreso')
      console.log(this.idReg);
       this.ref.doc(this.idReg).update({
-        // estado: "finalizado",
         horaIngreso: new Date()
       });
       this.getVisitas();
@@ -198,7 +194,6 @@ export default {
     updateHoraSalidaVisita() {
       console.log(this.idReg);
       this.ref.doc(this.idReg).update({
-        // estado: "finalizado",
         horaSalida: new Date()
       });
       this.getVisitas();

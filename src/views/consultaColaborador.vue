@@ -208,12 +208,7 @@
                     {{ item.SuperiorInmediato }}
                   </v-list-item-content>
                 </v-list-item>
-                <!-- <v-list-item>
-                  <v-list-item-content>Site:</v-list-item-content>
-                  <v-list-item-content class="align-end">
-                    {{ item.Site }}
-                  </v-list-item-content>
-                </v-list-item> -->
+
               </v-list>
             </div>
           </v-card>
@@ -257,7 +252,6 @@ export default {
       items: ["Perdida", "Robo", "Tramite", "Olvido", "Otros"],
       dniRules: [
         (v) => !!v || "Ingrese un DNI o CE",
-        //  v => /.+@.+\..+/.test(v) || "El email no es válido"
       ],
     };
   },
@@ -278,7 +272,6 @@ export default {
           let colaboradorData = [];
           colaboradorData = response;
           if (colaboradorData.length === 0) {
-            // this.testCollection.push({ message: "El colaborador no se encuentra registrado o no esta áctivo" });
             this.errMessage =
               "El colaborador no se encuentra registrado o no esta áctivo";
             this.testCollection = [];
@@ -290,7 +283,6 @@ export default {
         .catch((error) => console.log(error));
     },
     isNumber: function(evt) {
-      // this.testCollection = [];
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
       if (
